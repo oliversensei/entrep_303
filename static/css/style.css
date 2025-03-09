@@ -549,7 +549,7 @@ section {
     .sr-list {
         gap: 0.8rem;
         max-width: 700px;
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -588,6 +588,7 @@ section {
 
 .sr-container {
     max-width: 1200px;
+    width: 40%;
     margin: 0 auto;
 }
 
