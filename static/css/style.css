@@ -548,13 +548,14 @@ section {
 
     .sr-list {
         gap: 0.8rem;
+        max-width: 700px;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .sr-item {
         padding: 1rem;
         border-radius: 8px;
-        max-width: 700px;
-        width: 85%;
     }
 
     .sr-item h2 {
@@ -984,7 +985,7 @@ footer {
     }
 
     .brand-intro h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .brand-intro p {
@@ -1002,7 +1003,7 @@ footer {
     }
 
     .swot-title, .bmc-title, .sr-title, .contact-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .text-2xl {
