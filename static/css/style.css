@@ -478,19 +478,19 @@ section {
 @media (max-width: 1024px) {
     #sr {
         padding: 1.5rem;
-        padding-top: 80px; /* Adjusted for smaller navbar */
+        padding-top: 80px; 
     }
 
     #sr {
-        scroll-margin-top: 80px; /* Match navbar offset */
+        scroll-margin-top: 80px; 
     }
 
     .sr-container {
-        max-width: 90%; /* Reduce max-width for better fit */
+        max-width: 90%; 
     }
 
     .sr-list {
-        gap: 1rem; /* Reduce gap between items */
+        gap: 1rem; 
     }
 
     .sr-item {
@@ -515,6 +515,8 @@ section {
 
     .sr-item {
         padding: 1.2rem;
+        max-width: 700px;
+        width: 90%;
         border-radius: 10px; 
     }
 
@@ -532,7 +534,7 @@ section {
     #sr {
         padding: 1rem;
         padding-top: 60px;
-        min-height: auto; /* Allow section to shrink */
+        min-height: auto; 
     }
 
     #sr {
@@ -541,7 +543,7 @@ section {
 
     .sr-container {
         max-width: 100%;
-        padding: 0 0.5rem; /* Add slight horizontal padding */
+        padding: 0 0.5rem; 
     }
 
     .sr-list {
@@ -551,6 +553,8 @@ section {
     .sr-item {
         padding: 1rem;
         border-radius: 8px;
+        max-width: 700px;
+        width: 85%;
     }
 
     .sr-item h2 {
@@ -563,7 +567,7 @@ section {
     }
 
     .sr-item:hover {
-        transform: translateY(-3px); /* Smaller hover effect */
+        transform: translateY(-3px); 
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     }
 }
@@ -571,6 +575,14 @@ section {
 #sr {
     background: rgba(55, 65, 81, 0.2);
     padding: 2rem;
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px; 
+    scroll-behavior: smooth;
+    position: relative;
+    z-index: 1;
 }
 
 .sr-container {
@@ -587,6 +599,8 @@ section {
 .sr-item {
     background: rgba(55, 65, 81, 0.8);
     padding: 2rem;
+    max-width: 700px;
+    width: 100%;
     border-radius: 15px;
     transform: rotateY(0deg);
     transition: transform 0.5s, box-shadow 0.3s;
