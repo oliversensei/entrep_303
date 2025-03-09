@@ -1,6 +1,7 @@
 package main
 
 const indexTemplate = `
+{{define "index"}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,28 +14,27 @@ const indexTemplate = `
     <div id="background"></div>
     <div id="globe"></div>
 
-    {{template "navbar"}}
-    {{template "home"}}
-    {{template "modals"}}
-    {{template "swot"}}
-    {{template "bmc"}}
-    {{template "sr"}}
-    {{template "contact"}}
-    {{template "footer"}}
+    {{template "navbar" .}}
+    {{template "home" .}}
+    {{template "modals" .}}
+    {{template "swot" .}}
+    {{template "bmc" .}}
+    {{template "sr" .}}
+    {{template "contact" .}}
+    {{template "footer" .}}
 
     <div id="toast-container" class="toast-container">
         Message sent successfully!
     </div>
 
     <script src="/static/js/script.js"></script>
-    <script>
-        document.getElementById("year").textContent = {{.Year}};
-    </script>
 </body>
 </html>
+{{end}}
 `
 
 const navbarTemplate = `
+{{define "navbar"}}
 <nav class="navbar">
     <div class="container">
         <div class="logo">Ujay's Malunggay Crackers</div>
@@ -48,9 +48,11 @@ const navbarTemplate = `
         <div class="menu-btn">☰</div>
     </div>
 </nav>
+{{end}}
 `
 
 const homeTemplate = `
+{{define "home"}}
 <section id="home">
     <div class="container home-content fade-in">
         <div class="brand-intro">
@@ -70,9 +72,11 @@ const homeTemplate = `
         </div>
     </div>
 </section>
+{{end}}
 `
 
 const modalsTemplate = `
+{{define "modals"}}
 <div id="modal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">X</span>
@@ -95,14 +99,16 @@ const modalsTemplate = `
             </div>
             <div class="product-item">
                 <img src="/static/img/banner-3.jpg" alt="Product 3">
-				<p>Malunggay Crackers - Spicy</p>
+                <p>Malunggay Crackers - Spicy</p>
             </div>
         </div>
     </div>
 </div>
+{{end}}
 `
 
 const swotTemplate = `
+{{define "swot"}}
 <section id="swot">
     <div class="container">
         <h1 class="swot-title">SWOT Analysis</h1>
@@ -143,9 +149,11 @@ const swotTemplate = `
         </div>
     </div>
 </section>
+{{end}}
 `
 
 const bmcTemplate = `
+{{define "bmc"}}
 <section id="bmc">
     <div class="bmc-container">
         <h1 class="bmc-title">Business Model Canvas</h1>
@@ -221,9 +229,11 @@ const bmcTemplate = `
         </div>
     </div>
 </section>
+{{end}}
 `
 
 const srTemplate = `
+{{define "sr"}}
 <section id="sr">
     <div class="sr-container">
         <h1 class="sr-title">Strategic Recommendations</h1>
@@ -243,9 +253,11 @@ const srTemplate = `
         </div>
     </div>
 </section>
+{{end}}
 `
 
 const contactTemplate = `
+{{define "contact"}}
 <section id="contact">
     <div class="contact-container">
         <h1 class="contact-title">Contact Us</h1>
@@ -259,9 +271,11 @@ const contactTemplate = `
         </div>
     </div>
 </section>
+{{end}}
 `
 
 const footerTemplate = `
+{{define "footer"}}
 <footer>
     <div class="container footer-content">
         <div>
@@ -325,7 +339,8 @@ const footerTemplate = `
         </div>
     </div>
     <div class="copyright">
-        <p>© <span id="year"></span> BSIS 303 - Developed by John Oliver. All rights reserved.</p>
+        <p>© {{.Year}} BSIS 303 - Developed by John Oliver. All rights reserved.</p>
     </div>
 </footer>
+{{end}}
 `
