@@ -665,6 +665,8 @@ footer {
     .navbar {
         height: 60px;
         background: rgba(17, 24, 39, 0.9); 
+        position: fixed;
+        top: 0;
     }
 
     .navbar .container {
@@ -755,7 +757,9 @@ footer {
     .navbar {
         height: 50px;
         background: rgba(17, 24, 39, 0.9);
-        width: 90%;
+        width: 95%;
+        position: fixed;
+        top: 0;
     }
 
     .navbar .logo {
@@ -839,7 +843,9 @@ footer {
     .navbar {
         height: 50px;
         background: rgba(17, 24, 39, 0.9);
-        width: 90%;
+        width: 95%;
+        position: fixed;
+        top: 0;
     }
 
     .navbar .logo {
@@ -969,7 +975,9 @@ footer {
     .navbar {
         height: 40px;
         background: rgba(17, 24, 39, 0.9);
-        width: 90%;
+        width: 88%;
+        position: fixed;
+        top: 0;
     }
 
     .navbar .logo {
